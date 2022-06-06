@@ -1,0 +1,13 @@
+name: "Create docker tag"
+description: "Create docker tag based on git ref"
+inputs:
+  sha-length:
+    description: "Length"
+    required: true
+    default: 7
+outputs:
+  tag:
+    description: "Tag"
+runs:
+  using: "node16"
+  main: "dist/index.js"
