@@ -5,9 +5,15 @@ inputs:
     description: "Length"
     required: true
     default: 7
+  registry-name:
+    description: "Registry Name"
+    required: true
+    default: ${{ github.repository }}
 outputs:
   tag:
-    description: "Tag"
+    description: "Docker tag"
+  name:
+    description: "Docker image name"
 runs:
   using: "node16"
   main: "dist/index.js"
