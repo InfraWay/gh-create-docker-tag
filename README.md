@@ -39,7 +39,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: infraway/gh-create-docker-tag@v3
+      - uses: infraway/gh-create-docker-tag@v3.0
         id: docker_tag
       - name: Use docker tag
         run: echo "${{ steps.docker_tag.outputs.tag }}"
@@ -54,7 +54,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: infraway/gh-create-docker-tag@v3
+      - uses: infraway/gh-create-docker-tag@v3.0
         with:
           registry-name: private.registry.com/test-repo
         id: docker_tag
