@@ -15,3 +15,12 @@ jobs:
         run: |
           echo "The tag is ${{ steps.tag.outputs.tag }}"
           echo "Image name is ${{ steps.tag.outputs.name }}"
+      - name: Create Docker tag
+        id: tag-with-registry
+        uses: InfraWay/gh-create-docker-tag@main
+        with:
+          registry-name: custom-registry
+      - name: Get the tag
+        run: |
+          echo "The tag is ${{ steps.tag-with-registry.outputs.tag }}"
+          echo "Image name is ${{ steps.tag-with-registry.outputs.name }}"
