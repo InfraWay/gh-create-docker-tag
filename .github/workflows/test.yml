@@ -11,6 +11,8 @@ jobs:
       - name: Create Docker tag
         id: tag
         uses: InfraWay/gh-create-docker-tag@main
+        with:
+          tag-prefix: prefix-
       - name: Get the tag
         run: |
           echo "The tag is ${{ steps.tag.outputs.tag }}"
