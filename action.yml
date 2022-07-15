@@ -9,6 +9,10 @@ inputs:
     description: "Registry Name"
     required: true
     default: ${{ github.repository }}
+  tag-prefix:
+    description: "Registry Name"
+    required: false
+    default: ""
 outputs:
   tag:
     description: "Docker tag"
