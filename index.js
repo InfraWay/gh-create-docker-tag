@@ -10,7 +10,6 @@ try {
   const sha = github.context.sha;
   
   const tag = ref[1] == 'tags' ? tagPrefix + ref[2] : tagPrefix + sha.substring(0, shaLength);
-
   const name = registry + ':' + tag;
 
   console.log(`Tag: ${tag}`);

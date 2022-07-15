@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Create Docker tag
         id: tag
-        uses: InfraWay/gh-create-docker-tag@main
+        uses: InfraWay/gh-create-docker-tag@optional-tag
         with:
           tag-prefix: prefix-
       - name: Get the tag
@@ -19,7 +19,7 @@ jobs:
           echo "Image name is ${{ steps.tag.outputs.name }}"
       - name: Create Docker tag
         id: tag-with-registry
-        uses: InfraWay/gh-create-docker-tag@main
+        uses: InfraWay/gh-create-docker-tag@optional-tag
         with:
           registry-name: custom-registry
       - name: Get the tag
