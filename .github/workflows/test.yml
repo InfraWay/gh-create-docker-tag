@@ -7,6 +7,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    environment: Test
     steps:
       - name: Create Docker tag
         id: tag
