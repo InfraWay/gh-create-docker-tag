@@ -9,12 +9,21 @@ Github Action for creating tag/image based on git ref
 
 ### `sha-length`
 
-**Required** Length to keep as a tag for docker image
+**Optional** Length to keep as a tag for docker image
+
 **Default**: `7`
 
 ### `registry-name`
 
 **Optional** Registry name to create `image` in the format `image: private.registry.io/test:tag`
+
+**Default**: `${{ github.repository }}`
+
+### `tag-prefix`
+
+**Optional** Image tag prefix, example for 'dev-' prefix will be created following tag `image: private.registry.io/test:dev-tag`
+
+**Default**: `""`
 
 ## Outputs
 
