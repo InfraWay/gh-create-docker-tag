@@ -54,7 +54,7 @@ jobs:
         run: echo "${{ steps.docker_tag.outputs.tag }}"
 ```
 
-#### Without registry
+#### With registry
 ```yaml
 name: publish
 on: [push]
